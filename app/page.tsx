@@ -92,24 +92,24 @@ export default function CGPACalculator() {
     setPresetModes(newPresetModes);
   };
 
-  const togglePreset = (semesterIndex: number) => {
-    const newSemesters = [...semesters];
-    const newPresetModes = [...presetModes];
-    newPresetModes[semesterIndex] = !newPresetModes[semesterIndex];
-    if (newPresetModes[semesterIndex]) {
-      newSemesters[semesterIndex] = {
-        courses: [],
-        sgpa: 0,
-        totalCredits: defaultPresetCredits[semesterIndex] || 20,
-      };
-    } else {
-      newSemesters[semesterIndex] = {
-        courses: [{ name: "", credits: 0, grade: "O" }],
-      };
-    }
-    setSemesters(newSemesters);
-    setPresetModes(newPresetModes);
-  };
+  // const togglePreset = (semesterIndex: number) => {
+  //   const newSemesters = [...semesters];
+  //   const newPresetModes = [...presetModes];
+  //   newPresetModes[semesterIndex] = !newPresetModes[semesterIndex];
+  //   if (newPresetModes[semesterIndex]) {
+  //     newSemesters[semesterIndex] = {
+  //       courses: [],
+  //       sgpa: 0,
+  //       totalCredits: defaultPresetCredits[semesterIndex] || 20,
+  //     };
+  //   } else {
+  //     newSemesters[semesterIndex] = {
+  //       courses: [{ name: "", credits: 0, grade: "O" }],
+  //     };
+  //   }
+  //   setSemesters(newSemesters);
+  //   setPresetModes(newPresetModes);
+  // };
 
   const calculateResults = () => {
     const calculatedCGPA = calculateCGPA(semesters);
