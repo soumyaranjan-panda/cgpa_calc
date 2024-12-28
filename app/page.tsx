@@ -138,7 +138,7 @@ export default function CGPACalculator() {
                   I know my SGPA
                 </Label>
               </div>
-              <div className="flex items-center space-x-2">
+              {/* {<div className="flex items-center space-x-2">
                 <Switch
                   id={`preset-toggle-${semesterIndex}`}
                   checked={presetModes[semesterIndex]}
@@ -147,7 +147,7 @@ export default function CGPACalculator() {
                 <Label htmlFor={`preset-toggle-${semesterIndex}`}>
                   Use Preset
                 </Label>
-              </div>
+              </div>} */}
             </div>
           </CardHeader>
           <CardContent>
